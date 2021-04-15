@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>OnlineModuleManagement</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>Login</description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.module.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Registration</description>
+    <display-name>RegistrationServlet</display-name>
+    <servlet-name>RegistrationServlet</servlet-name>
+    <servlet-class>com.module.servlet.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationServlet</servlet-name>
+    <url-pattern>/RegistrationServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description>ModuleManagementServlet</description>
+    <display-name>ModuleManagementServlet</display-name>
+    <servlet-name>ModuleManagementServlet</servlet-name>
+    <servlet-class>com.module.servlet.ModuleManagementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModuleManagementServlet</servlet-name>
+    <url-pattern>/ModuleManagementServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

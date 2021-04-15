@@ -1,0 +1,143 @@
+.button{
+	background-color: #4CAF50; 
+	border: none;
+	color: white;
+	padding: 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+#customers {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customers td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+	background-color: #ddd;
+}
+
+#customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}
+.student-grid-color th{
+	
+	background-color: #008CBA!important;
+}
+input[type=text],input[type=password], select {
+  width: 180px;
+  padding: 5px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.main_container{
+	width: 60%; 
+	margin-left: 280px; 
+	margin-top: -22px;
+	min-height:600px;
+	max-height:1000px;
+	height:auto;
+}
+.main_heading{
+	height: 80px; 
+	background-color: #7d7f7c; 
+	text-align: center;
+}
+.main_heading_text{
+	color: white;
+    font-size: 17px;
+    padding-top: 30px;
+}
+.sub_container{
+	width: 100%; 
+	min-height:580px;
+	max-height:1000px;
+	height:auto;
+	padding-top: 1px; 
+	background-color: lightgray;
+}
+.height_tr{
+	height:35px;
+}
+.padding-left{
+	padding-left:10px;
+}
+.width_150{
+	width:120px;
+}
+.align_right{
+	text-align:right;
+}
+.background-color-gray{
+	background-color: #eeeeee;
+}
+.background-color-blue{
+	background-color: #008CBA!important;
+}
+.fieldset-style{
+	background-color: #4CAF50;
+	color: white;
+	padding: 5px 10px;
+}
+.login-container{
+	width: 40%; 
+	height: 300px; 
+	margin-left: 200px;
+}
+.reg-container{
+	width: 90%; 
+	height: 400px; 
+	margin-left: 50px;
+	display: none;
+}
+.reg-admin-container{
+	width: 50%; 
+	height: 400px; 
+	margin-left: 200px;
+	display: none;
+}
+.border-radius-fieldset{
+	border-radius: 6px;
+}
+.text-decoration{
+	text-decoration:underline;
+	cursor: pointer;
+}
+.font-weight-bold{
+	font-weight: bold;
+}
+.error-msg{
+	color:red;
+}
+.success-msg{
+	color:green;	
+}
+.toogle-btn{
+	margin-right:10px;
+	color: white;
+	border-radius: 8px;
+	background-color: #4CAF50;	
+}
+.backgroud-white{
+	background-color: white;
+}

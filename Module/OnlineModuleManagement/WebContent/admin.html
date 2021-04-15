@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Admin Portal</title>
+
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"
+	type="text/javascript"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+	<div class="main_container">
+		<div class="main_heading">
+			<h4 class="main_heading_text">Online Module Management - Admin Dashboard</h4>
+		</div>
+		<form id="adminForm">
+		<div class="sub_container">
+			<div style="height: 50px"></div>
+			<div id="adminLoginDiv" class="login-container">
+				
+					<fieldset class="border-radius-fieldset background-color-gray">
+						<legend class="fieldset-style border-radius-fieldset">Admin
+							Login</legend>
+						<table>
+							<tr class="height_tr">
+								<td colspan="2"><label id="loginErrorMsg" class="error-msg"></label></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminLogin">User Name:</label></td>
+								<td><input id="adminLogin" type="text" name="adminLogin" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminPassword">Password:</label></td>
+								<td><input id="adminPassword" type="password" name="adminPassword" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td></td>
+								<td><input id="loginButton" type="button" value="Submit" onclick="handleLogin(true);"
+									class="button" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td><input type="hidden" name="isAdmin" value="true" /> <a
+									id="showRegistrationDiv" class="text-decoration"
+									onclick="adminEnableRegistrationDiv();">New User ?</a></td>
+							</tr>
+						</table>
+					</fieldset>
+			</div>
+			<div id="adminRegistrationDiv" class="reg-admin-container">
+					<fieldset class="border-radius-fieldset background-color-gray">
+						<legend class="fieldset-style border-radius-fieldset">Admin
+							Registration</legend>
+						<table>
+							<tr class="height_tr">
+								<td colspan="2"><label id="regErrorMsg" class="error-msg"></label><label
+									id="regSuccessMsg" class="success-msg"></label></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminRegLogin">User Name:</label></td>
+								<td><input id="adminRegLogin" type="text" name="adminRegLogin" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminRegPassword">Password:</label></td>
+								<td><input id="adminRegPassword" type="password"
+									name="adminRegPassword" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminConfirmPassword">Confirm Password:</label></td>
+								<td><input id="adminConfirmPassword" type="password"
+									name="adminConfirmPassword" /></td>
+							</tr>
+							<tr height="35px;">
+								<td><label for="adminMobileNumber">Mobile Number:</label></td>
+								<td><input id="adminMobileNumber" type="text"
+									name="adminMobileNumber" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminemail">Email:</label></td>
+								<td><input id="adminemail" type="text" name="adminemail" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminSecurityQuestion">Security
+										Question:</label></td>
+								<td><select id="adminSecurityQuestion" name="adminSecurityQuestion">
+										<option value="0" label="--- Please Select ---"></option>
+										<option value="What is your pet name ?" label="What is your pet name ?"></option>
+										<option value="What is your favourite sport ?" label="What is your favourite sport ?"></option>
+										<option value="What is your favourite channel ?" label="What is your favourite channel ?"></option>
+								</select></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label for="adminAnswer">Answer:</label></td>
+								<td><input id="adminAnswer" type="text" name="adminAnswer" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td></td>
+								<td><input type="hidden" name="isAdmin" value="true" /> <input
+									id="adminRegisterButton" type="button" value="Register"
+									class="button" onclick="handleRegistration(true)" /></td>
+							</tr>
+							<tr class="height_tr">
+								<td><input type="hidden" name="isAdmin" value="false" /> <a
+									id="showRegistrationDiv" style="cursor: pointer;"
+									class="text-decoration" onclick="adminEnableLoginDiv();">Login ?</a></td>
+							</tr>
+
+						</table>
+					</fieldset>
+			</div>
+		</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Student Portal</title>
+
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"
+	type="text/javascript"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" href="app.css">
+<style>
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		setUserData(false);
+	});
+</script>
+</head>
+<body>
+	<div class="main_container">
+		<div class="main_heading">
+			<h4 class="main_heading_text">Online Module Management - Student Dashboard</h4>
+		</div>
+		<div class="sub_container">
+			<div id="selectRoomFormDiv">
+				<form id="moduleForm">
+					
+					<table>
+						<tr >
+							<td class="align_right" colspan="3">Welcome, <label
+								class="font-weight-bold" id="userName"></label> <label
+								class="padding-left text-decoration"
+								onclick="handleLogOut(false)"> Logout</label>
+								<input type="hidden" name="userId" id="userId" /> 
+							</td>
+
+						</tr>
+						<tr>
+							<td colspan="2" class="padding-left">The below Modules are Mandatory</td>
+						</tr>
+						<tr class="height_tr">
+								<td colspan="2"><label id="dashBoardErrorMsg" class="error-msg"></label><label
+									id="dashBoardSuccessMsg" class="success-msg"></label></td>
+							</tr>
+						<tr class="height_tr">
+								<td width="150px"><label class="error-msg">*</label><label for="moduleOne">Module-1:</label></td>
+								<td><input id="moduleOne" type="text" class="backgroud-white" name="moduleOne" value="IT Security" disabled="disabled"/></td>
+								<td width="500px"></td>
+							</tr>
+							<tr class="height_tr">
+								<td> <label class="error-msg">*</label><label for="moduleTwo">Module-2:</label></td>
+								<td><input id="moduleTwo" type="text" class="backgroud-white" name="moduleTwo" value="English For Academic Course" disabled="disabled"/></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label class="error-msg">*</label><label for="moduleThree">Module-3:</label></td>
+								<td><input id="moduleThree" type="text" class="backgroud-white" name="moduleThree" value="Cyber Law"  disabled="disabled"/></td>
+							</tr>
+							<tr class="height_tr">
+								<td> <label class="error-msg">*</label><label for="moduleFour">Module-4:</label></td>
+								<td><input id="moduleFour" type="text" class="backgroud-white" name="moduleFour" value="IT Fundamentals" disabled="disabled"/></td>
+							</tr>
+
+						<tr class="height_tr">
+								<td><label class="error-msg">*</label><label for="optionalModuleOne">Optional Module-1:</label></td>
+								<td><select id="optionalModuleOne" name="optionalModuleOne">
+										<option value="0" label="--- Please Select ---"></option>
+										<option value="mod5" label="Content Delivery Networks"></option>
+										<option value="mod6" label="Business Data Analytics"></option>
+								</select></td>
+						</tr>
+						<tr class="height_tr">
+								<td><label class="error-msg">*</label><label for="optionalModuleTwo">Optional Module-2:</label></td>
+								<td><select id="optionalModuleTwo" name="optionalModuleTwo">
+										<option value="0" label="--- Please Select ---"></option>
+										<option value="mod7" label="Network Engineering"></option>
+										<option value="mod8" label="Programming Environment"></option>
+								</select></td>
+							</tr>
+							<tr class="height_tr">
+								<td><label class="error-msg"></label><label for="paymentStatus">Payment Status:</label></td>
+								<td><input id="paymentStatus" class="backgroud-white" type="text" name="paymentStatus" value="UnPaid" disabled="disabled"/></td>
+							</tr>
+						<tr>
+							<td colspan="2" class="padding-left">
+							<label class="font-weight-bold" id="selectedModulelist"></label></td>
+						</tr>
+						<tr class="height_tr">
+								<td></td>
+								<td><input id="saveId" type="button" value="Submit" onclick="submitSelectedModules();"
+									class="button background-color-blue" /></td>
+							</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
